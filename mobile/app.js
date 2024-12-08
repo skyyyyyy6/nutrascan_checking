@@ -91,8 +91,8 @@ const App = () => {
       const base64Image = await convertImageToBase64(uri);
       console.log("Base64 Image Ready:", base64Image ? base64Image.substring(0, 50) : "No image data");  // Log first 50 characters of base64
 
-      console.log("Sending image to API...");
-      const response = await axios.post(apiUrl, 
+      console.log("Sending image to API..."); // last hit
+      const response = await axios.post(apiUrl, //stuck/gone
         { image: base64Image },
         { 
           timeout: 30000,
@@ -104,7 +104,7 @@ const App = () => {
           validateStatus: null // Accept all status codes to see what's happening
         }
       );
-      console.log("API Response:", response.status, response.data);
+      console.log("API Response:", response.status, response.data); //didnt got triggered/hit
       
       if (response.data && response.data.food_name && response.data.nutrition_info) {
         setResponseData(response.data);  
