@@ -40,7 +40,7 @@ const App = () => {
   const [responseData, setResponseData] = useState(null);  // New state variable to hold API response
   const cameraRef = useRef(null);
 
-  const BASE_URL = 'https://b646-103-19-109-57.ngrok-free.app';   // API URL
+  const BASE_URL = 'https://1eed-103-19-109-57.ngrok-free.app';   // API URL
 
   useEffect(() => {
     (async () => {
